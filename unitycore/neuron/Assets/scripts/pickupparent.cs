@@ -58,7 +58,7 @@ public class pickupparent : MonoBehaviour {
 
 	void OnTriggerStay(Collider col)
 	{
-		Debug.Log("you have collided with "+ col.name + " and activated Ontriggerstay");
+	//	Debug.Log("you have collided with "+ col.name + " and activated Ontriggerstay");
 
 		if(device.GetTouch(SteamVR_Controller.ButtonMask.Trigger))
 		{
