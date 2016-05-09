@@ -69,6 +69,7 @@
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_Render.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_RenderModel.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_Skybox.cs" />
+     <Compile Include="Assets\SteamVR\Scripts\SteamVR_SphericalProjection.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_Stats.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_Status.cs" />
      <Compile Include="Assets\SteamVR\Scripts\SteamVR_StatusText.cs" />
@@ -85,6 +86,7 @@
      <None Include="Assets\SteamVR\Resources\SteamVR_HiddenArea.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Overlay.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_Blit.shader" />
+     <None Include="Assets\SteamVR\Resources\SteamVR_SphericalProjection.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
      <None Include="Assets\SteamVR\readme.txt" />
      <None Include="Assets\SteamVR\Resources\SteamVR_ColorOut.shader" />
@@ -94,10 +96,6 @@
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity_5_3/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{18E1D415-7380-4A4D-BD98-11CAB2A017CE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
