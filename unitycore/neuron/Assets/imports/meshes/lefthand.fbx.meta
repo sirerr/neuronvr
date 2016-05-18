@@ -1,0 +1,712 @@
+fileFormatVersion: 2
+guid: 47673021a923e6842bae3eb50825db8c
+timeCreated: 1462908410
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: body.001
+    100002: LeftHand
+    100004: //RootNode
+    100006: LeftHandIndex1
+    100008: LeftHandIndex2
+    100010: LeftHandIndex3
+    100012: LeftHandIndex3_end
+    100014: LeftHandMiddle1
+    100016: LeftHandMiddle2
+    100018: LeftHandMiddle3
+    100020: LeftHandMiddle3_end
+    100022: LeftHandPinky1
+    100024: LeftHandPinky2
+    100026: LeftHandPinky3
+    100028: LeftHandPinky3_end
+    100030: LeftHandRing1
+    100032: LeftHandRing2
+    100034: LeftHandRing3
+    100036: LeftHandRing3_end
+    100038: LeftHandThumb1
+    100040: LeftHandThumb2
+    100042: LeftHandThumb3
+    100044: LeftHandThumb3_end
+    100046: LeftInHandIndex
+    100048: LeftInHandMiddle
+    100050: LeftInHandPinky
+    100052: LeftInHandRing
+    100054: RightHand
+    100056: RightHandIndex1
+    100058: RightHandIndex2
+    100060: RightHandIndex3
+    100062: RightHandIndex3_end
+    100064: RightHandMiddle1
+    100066: RightHandMiddle2
+    100068: RightHandMiddle3
+    100070: RightHandMiddle3_end
+    100072: RightHandPinky1
+    100074: RightHandPinky2
+    100076: RightHandPinky3
+    100078: RightHandPinky3_end
+    100080: RightHandRing1
+    100082: RightHandRing2
+    100084: RightHandRing3
+    100086: RightHandRing3_end
+    100088: RightHandThumb1
+    100090: RightHandThumb2
+    100092: RightHandThumb3
+    100094: RightHandThumb3_end
+    100096: RightInHandIndex
+    100098: RightInHandMiddle
+    100100: RightInHandPinky
+    100102: RightInHandRing
+    100104: v2
+    400000: body.001
+    400002: LeftHand
+    400004: //RootNode
+    400006: LeftHandIndex1
+    400008: LeftHandIndex2
+    400010: LeftHandIndex3
+    400012: LeftHandIndex3_end
+    400014: LeftHandMiddle1
+    400016: LeftHandMiddle2
+    400018: LeftHandMiddle3
+    400020: LeftHandMiddle3_end
+    400022: LeftHandPinky1
+    400024: LeftHandPinky2
+    400026: LeftHandPinky3
+    400028: LeftHandPinky3_end
+    400030: LeftHandRing1
+    400032: LeftHandRing2
+    400034: LeftHandRing3
+    400036: LeftHandRing3_end
+    400038: LeftHandThumb1
+    400040: LeftHandThumb2
+    400042: LeftHandThumb3
+    400044: LeftHandThumb3_end
+    400046: LeftInHandIndex
+    400048: LeftInHandMiddle
+    400050: LeftInHandPinky
+    400052: LeftInHandRing
+    400054: RightHand
+    400056: RightHandIndex1
+    400058: RightHandIndex2
+    400060: RightHandIndex3
+    400062: RightHandIndex3_end
+    400064: RightHandMiddle1
+    400066: RightHandMiddle2
+    400068: RightHandMiddle3
+    400070: RightHandMiddle3_end
+    400072: RightHandPinky1
+    400074: RightHandPinky2
+    400076: RightHandPinky3
+    400078: RightHandPinky3_end
+    400080: RightHandRing1
+    400082: RightHandRing2
+    400084: RightHandRing3
+    400086: RightHandRing3_end
+    400088: RightHandThumb1
+    400090: RightHandThumb2
+    400092: RightHandThumb3
+    400094: RightHandThumb3_end
+    400096: RightInHandIndex
+    400098: RightInHandMiddle
+    400100: RightInHandPinky
+    400102: RightInHandRing
+    400104: v2
+    4300000: body.001
+    7400000: full
+    7400002: idleleft
+    7400004: claspleft
+    7400006: unclasp
+    9500000: //RootNode
+    13700000: body.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: full
+      takeName: v2|v2Action
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body.001
+        weight: 1
+      - path: v2
+        weight: 1
+      - path: v2/LeftHand
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3/LeftHandThumb3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3/LeftHandIndex3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3/LeftHandMiddle3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3/LeftHandPinky3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2/LeftHandRing3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2/LeftHandRing3/LeftHandRing3_end
+        weight: 1
+      - path: v2/RightHand
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3/RightHandThumb3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2/RightHandIndex3
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2/RightHandIndex3/RightHandIndex3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3/RightHandMiddle3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2/RightHandPinky3
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2/RightHandPinky3/RightHandPinky3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandRing
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2/RightHandRing3
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2/RightHandRing3/RightHandRing3_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idleleft
+      takeName: v2|v2Action
+      firstFrame: 0
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body.001
+        weight: 1
+      - path: v2
+        weight: 1
+      - path: v2/LeftHand
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3/LeftHandThumb3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3/LeftHandIndex3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3/LeftHandMiddle3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3/LeftHandPinky3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2/LeftHandRing3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2/LeftHandRing3/LeftHandRing3_end
+        weight: 1
+      - path: v2/RightHand
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3/RightHandThumb3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2/RightHandIndex3
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2/RightHandIndex3/RightHandIndex3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3/RightHandMiddle3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2/RightHandPinky3
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2/RightHandPinky3/RightHandPinky3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandRing
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2/RightHandRing3
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2/RightHandRing3/RightHandRing3_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: claspleft
+      takeName: v2|v2Action
+      firstFrame: 15
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body.001
+        weight: 1
+      - path: v2
+        weight: 1
+      - path: v2/LeftHand
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3/LeftHandThumb3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3/LeftHandIndex3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3/LeftHandMiddle3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3/LeftHandPinky3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2/LeftHandRing3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2/LeftHandRing3/LeftHandRing3_end
+        weight: 1
+      - path: v2/RightHand
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3/RightHandThumb3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2/RightHandIndex3
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2/RightHandIndex3/RightHandIndex3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3/RightHandMiddle3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2/RightHandPinky3
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2/RightHandPinky3/RightHandPinky3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandRing
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2/RightHandRing3
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2/RightHandRing3/RightHandRing3_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: unclasp
+      takeName: v2|v2Action
+      firstFrame: 25
+      lastFrame: 35
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body.001
+        weight: 1
+      - path: v2
+        weight: 1
+      - path: v2/LeftHand
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3
+        weight: 1
+      - path: v2/LeftHand/LeftHandThumb1/LeftHandThumb2/LeftHandThumb3/LeftHandThumb3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandIndex/LeftHandIndex1/LeftHandIndex2/LeftHandIndex3/LeftHandIndex3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandMiddle/LeftHandMiddle1/LeftHandMiddle2/LeftHandMiddle3/LeftHandMiddle3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandPinky/LeftHandPinky1/LeftHandPinky2/LeftHandPinky3/LeftHandPinky3_end
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2/LeftHandRing3
+        weight: 1
+      - path: v2/LeftHand/LeftInHandRing/LeftHandRing1/LeftHandRing2/LeftHandRing3/LeftHandRing3_end
+        weight: 1
+      - path: v2/RightHand
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3
+        weight: 1
+      - path: v2/RightHand/RightHandThumb1/RightHandThumb2/RightHandThumb3/RightHandThumb3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2/RightHandIndex3
+        weight: 1
+      - path: v2/RightHand/RightInHandIndex/RightHandIndex1/RightHandIndex2/RightHandIndex3/RightHandIndex3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3
+        weight: 1
+      - path: v2/RightHand/RightInHandMiddle/RightHandMiddle1/RightHandMiddle2/RightHandMiddle3/RightHandMiddle3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2/RightHandPinky3
+        weight: 1
+      - path: v2/RightHand/RightInHandPinky/RightHandPinky1/RightHandPinky2/RightHandPinky3/RightHandPinky3_end
+        weight: 1
+      - path: v2/RightHand/RightInHandRing
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2/RightHandRing3
+        weight: 1
+      - path: v2/RightHand/RightInHandRing/RightHandRing1/RightHandRing2/RightHandRing3/RightHandRing3_end
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
