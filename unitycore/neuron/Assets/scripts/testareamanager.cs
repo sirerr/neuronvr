@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Valve.VR;
+
+
 
 public class testareamanager : MonoBehaviour {
 
@@ -16,11 +19,13 @@ public class testareamanager : MonoBehaviour {
 	public GameObject wall2;
 	public GameObject wall3;
 
+	public Rect test;
+
 	void Awake()
 	{
 		camerarig = GameObject.FindGameObjectWithTag("MainCamera");
 //	
-
+	//test = OpenVR.Chaperone.GetPlayAreaRect();
 	}
 
 	// Use this for initialization
@@ -34,7 +39,7 @@ public class testareamanager : MonoBehaviour {
 		wall1.transform.position = playarealoc2;
 		wall2.transform.position = playarealoc3;
 		wall3.transform.position = playarealoc4;
-
+//
 	}
 	
 	// Update is called once per frame
