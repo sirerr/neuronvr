@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - testobj
+  - tool
   layers:
   - Default
   - TransparentFX
