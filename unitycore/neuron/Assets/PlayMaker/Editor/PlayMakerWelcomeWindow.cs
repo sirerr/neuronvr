@@ -17,7 +17,8 @@ namespace HutongGames.PlayMakerEditor
     [InitializeOnLoad]
     public class PlayMakerWelcomeWindow : EditorWindow
     {
-        public const string InstallCurrentVersion = "1.8.1";
+        // Remember to update version info since it's used by export scripts!
+        public const string InstallCurrentVersion = "1.8.3";
         public const string InstallBetaVersion = "";
         public const string Version = InstallCurrentVersion + " " + InstallBetaVersion;
 
@@ -82,7 +83,7 @@ namespace HutongGames.PlayMakerEditor
 
         private static bool stylesInitialized;
 
-#if PLAYMAKER_1_8_1
+#if PLAYMAKER_1_8_3
         [MenuItem("PlayMaker/Welcome Screen", false, 500)]
 #elif PLAYMAKER
         [MenuItem("PlayMaker/Update PlayMaker", false, 500)]
@@ -113,7 +114,7 @@ namespace HutongGames.PlayMakerEditor
             GetPlayMakerVersion();
 
             // Is PlayMakerPhotonWizard available?
-            setupPhoton = GetType("PlayMakerPhotonWizard") != null;
+            setupPhoton = PlayMakerEditorStartup.GetType("PlayMakerPhotonWizard") != null;
 
             // Setup pages
 
@@ -146,7 +147,7 @@ namespace HutongGames.PlayMakerEditor
 
         private static void GetPlayMakerVersion()
         {
-            var versionInfo = GetType("HutongGames.PlayMakerEditor.VersionInfo");
+            var versionInfo = PlayMakerEditorStartup.GetType("HutongGames.PlayMakerEditor.VersionInfo");
             if (versionInfo != null)
             {
                 currentVersion = versionInfo.GetMethod("GetAssemblyInformationalVersion").Invoke(null, null) as string;
@@ -414,8 +415,14 @@ namespace HutongGames.PlayMakerEditor
             GUILayout.Label("Version 1.8+", EditorStyles.boldLabel);
             EditorGUILayout.HelpBox("FSMs saved with 1.8+ cannot be opened in earlier versions of PlayMaker! Please BACKUP projects!", MessageType.Warning);
 
+            GUILayout.Label("Version 1.8.2", EditorStyles.boldLabel);
+            EditorGUILayout.HelpBox("PlayMaker 1.8.2 added the following system events:\n" +
+                                    "\nMOUSE UP AS BUTTON, JOINT BREAK, JOINT BREAK 2D, PARTICLE COLLISION." +
+                                    "\n\nPlease remove any custom proxy components you used before to send these events.",
+                                    MessageType.Warning);
+
             GUILayout.Label("Version 1.8.1", EditorStyles.boldLabel);
-            EditorGUILayout.HelpBox("PlayMaker 1.8.1 integrates the following add-ons and actions:\n"+
+            EditorGUILayout.HelpBox("PlayMaker 1.8.1 integrated the following add-ons and actions:\n"+
                                     "\n- Physics2D Add-on" +
                                     "\n- Mecanim Animator Add-on" +
                                     "\n- Vector2, Quaternion, and Trigonometry actions"+
@@ -583,7 +590,7 @@ namespace HutongGames.PlayMakerEditor
                                                         "\n\nNOTE: Projects saved with PlayMaker 1.8+ cannot be opened in older versions of PlayMaker!"))
             {
                 EditorPrefs.SetBool(editorPrefsShowUpgradeGuide, true);
-                ImportPackage(AssetDatabase.GUIDToAssetPath(AssetGUIDs.PlayMakerUnitypackage181));
+                ImportPackage(AssetDatabase.GUIDToAssetPath(AssetGUIDs.PlayMakerUnitypackage183));
             }
         }
 
@@ -617,7 +624,7 @@ namespace HutongGames.PlayMakerEditor
 
         private static void LaunchPhotonSetupWizard(object userData)
         {
-            GetType("PlayMakerPhotonWizard").GetMethod("Init").Invoke(null, null);
+            PlayMakerEditorStartup.GetType("PlayMakerPhotonWizard").GetMethod("Init").Invoke(null, null);
         }
 
         private static void OpenUrl(object userData)
@@ -676,43 +683,16 @@ namespace HutongGames.PlayMakerEditor
             EditorPrefs.SetInt(editorPrefsSavedPage, (int)currentPage);
         }
 
-        // Normally we would use ReflectionUtils.GetGlobalType but this window now needs to be standalone
-        // Instead of copy/pasting ReflectionUtils, decided to try this code from UnityAnswers:
-        // http://answers.unity3d.com/questions/206665/typegettypestring-does-not-work-in-unity.html
+        [Obsolete("Use PlayMakerEditorStartup.GetType instead.")]
         public static Type GetType(string typeName)
         {
-            // Try Type.GetType() first. This will work with types defined
-            // by the Mono runtime, in the same assembly as the caller, etc.
-            var type = Type.GetType(typeName);
-
-            // If it worked, then we're done here
-            if (type != null)
-                return type;
-
-            // otherwise look in loaded assemblies
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                type = assembly.GetType(typeName);
-                if (type != null)
-                {
-                    break;
-                }
-            }
-
-            return type;
+            return PlayMakerEditorStartup.GetType(typeName);
         }
 
+        [Obsolete("Use PlayMakerEditorStartup.FindTypeInLoadedAssemblies instead.")]
         public static Type FindTypeInLoadedAssemblies(string typeName)
         {
-            Type _type = null;
-            foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                _type = assembly.GetType(typeName);
-                if (_type != null)
-                    break;
-            }
-
-            return _type;
+            return PlayMakerEditorStartup.FindTypeInLoadedAssemblies(typeName);
         }
     }
 }

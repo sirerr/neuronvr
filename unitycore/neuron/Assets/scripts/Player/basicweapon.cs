@@ -16,7 +16,7 @@ public class basicweapon : MonoBehaviour {
 	SteamVR_Controller.Device deviceobj;
 
 	//attack paramaters
-	public float attackspeed =3f;
+	public float attackSpeed =3f;
 
 	void Awake()
 	{
@@ -36,8 +36,8 @@ public class basicweapon : MonoBehaviour {
 		{
 			GameObject attack;
 			attack = Instantiate (popperobj, emitter.transform.position, Quaternion.identity) as GameObject;
-			Rigidbody rbody = attack.GetComponent<Rigidbody> ();
-			rbody.velocity = emitter.transform.forward * attackspeed;
+            attack.GetComponent<basicprojectile>().speed = attackSpeed;
 		}
 	}
+
 }

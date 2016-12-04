@@ -1,4 +1,7 @@
-﻿namespace HutongGames.PlayMakerEditor
+﻿using UnityEditor;
+using UnityEngine;
+
+namespace HutongGames.PlayMakerEditor
 {
     /// <summary>
     /// Collect Playmaker Asset GUIDs as static strings
@@ -17,6 +20,20 @@
         public static string PlayMakerUnitypackage1784 = "dd583cbbf618ba54983cdf396b28e49b";
         public static string PlayMakerUnitypackage180 = "f982487afa4f0444ea11e90a9d05b94e";
         public static string PlayMakerUnitypackage181 = "0921e97db908b2f4e8e407e68a2ed27c";
+        public static string PlayMakerUnitypackage182 = "cd593cc3ded027746bf4658e85cb9fb9";
+        public static string PlayMakerUnitypackage183 = "21698fae67461744189ec5c7a8eb143b";
+
+
+        public static string GetFullAssetPath(string assetGUID)
+        {
+            var path = AssetDatabase.GUIDToAssetPath(assetGUID);
+            if (!string.IsNullOrEmpty(path))
+            {
+                // strip Assets from asset path since it's in dataPath
+                path = Application.dataPath + path.Substring(6); 
+            }
+            return path;
+        }
     }
 }
 

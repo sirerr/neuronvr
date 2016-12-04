@@ -16,14 +16,25 @@ namespace HutongGames.PlayMakerEditor
     public class PreUpdateChecker : EditorWindow
     {
         // Categories used to report results
-        private readonly string[] checkCategories =
-        {
-            "Mecanim Animator Add-on", 
-            "Physics2D Add-on", 
-            "Vector2 Actions", 
-            "Quaternion Actions",
-            "Trigonometry Actions" 
-        };
+	    private readonly string[] checkCategories =
+	    {
+		    "Mecanim Animator Add-on", 
+		    "Physics2D Add-on",
+		    "Trigonometry Actions",
+		    "Vector2 Actions",
+		    "Quaternion Actions"
+	    };
+
+        // Where official actions are installed
+        private readonly string[] officialPaths =
+	    {
+		    "PlayMaker/Actions/Animator", 
+		    "PlayMaker/Actions/Physics2D", 
+		    "PlayMaker/Actions/Trigonometry", 
+		    "PlayMaker/Actions/Vector2", 
+		    "PlayMaker/Actions/Quaternion"
+	    };
+	    
         
         // Files to check for in each category
         private readonly string[] checkFiles =
@@ -49,7 +60,9 @@ namespace HutongGames.PlayMakerEditor
         private readonly List<string> allFilesInProject = new List<string>();
         private readonly List<string> allFilenames = new List<string>();
         private readonly List<string> failedCategories = new List<string>();
-
+	    
+	    private bool logCheckFindingToggle;
+	    
         private Vector2 scrollPosition;
 
         [MenuItem("PlayMaker/Tools/Pre-Update Check", false, 66)]
@@ -61,9 +74,9 @@ namespace HutongGames.PlayMakerEditor
         private void OnEnable()
         {
 #if UNITY_PRE_5_1
-            title = "PlayMaker 1.8.1 Update Check";
+            title = "PlayMaker 1.8.3 Update Check";
 #else
-            titleContent = new GUIContent("PlayMaker 1.8.1 Update Check");
+            titleContent = new GUIContent("PlayMaker 1.8.3 Update Check");
 #endif
             minSize = new Vector2(400,400);
 
@@ -99,40 +112,51 @@ namespace HutongGames.PlayMakerEditor
                 ConsoleTextArea("The scan did not find any known conflicts in your project.\n");
             }
 
-            GUILayout.Label("Update Notes", EditorStyles.boldLabel);   
-            
-            EditorGUILayout.HelpBox("\nPlayMaker 1.8.1 integrates the following add-ons and actions:\n" +
-                            "\n- Physics2D Add-on" +
-                            "\n- Mecanim Animator Add-on" +
-                            "\n- Vector2 Actions\n- Quaternion Actions\n- Trigonometry Actions\n", MessageType.Info);
+            GUILayout.Label("Update Notes", EditorStyles.boldLabel);
+
+            EditorGUILayout.HelpBox("\nPlayMaker 1.8.2 added the following system events:\n" +
+                                    "\nMOUSE UP AS BUTTON, JOINT BREAK, JOINT BREAK 2D, PARTICLE COLLISION." +
+                                    "\n\nPlease remove any custom proxy components you used before to send these events.\n", 
+                                    MessageType.Info);
+
+
+            EditorGUILayout.HelpBox("\nPlayMaker 1.8.1 integrated the following add-ons and actions:\n" +
+                                    "\n- Physics2D Add-on" +
+                                    "\n- Mecanim Animator Add-on" +
+                                    "\n- Vector2 Actions\n- Quaternion Actions\n- Trigonometry Actions\n",
+                                    MessageType.Info);
 
             if (failedCategories.Count > 0)
             {
-                EditorGUILayout.HelpBox("\nIf you imported these actions from official unitypackages the update should replace them automatically." +
-                    "\n\nIf you downloaded these actions from the Ecosystem or Forums you might get errors from duplicate files after updating."+ 
+                EditorGUILayout.HelpBox(
+                    "\nIf you imported these actions from official unitypackages the update should replace them automatically." +
+                    "\n\nIf you downloaded these actions from the Ecosystem or Forums you might get errors from duplicate files after updating." +
                     "\n\nYou can either remove these files before updating, or remove duplicate files to fix any errors after updating.\n",
                     MessageType.Warning);
             }
             else
             {
                 EditorGUILayout.HelpBox("\nThe Update Check did not find any of these files in your project. " +
-                                        "\n\nHowever, if you think you have some of these actions in your project, "+
-                                        "you can either remove them before updating, "+
+                                        "\n\nHowever, if you think you have some of these actions in your project, " +
+                                        "you can either remove them before updating, " +
                                         "or remove duplicate files to fix any errors after updating.\n",
                                         MessageType.Info);
             }
 
             EditorGUILayout.HelpBox("\nThe updated files will be located under:\nAssets/PlayMaker/Actions" +
-                            "\n\nOlder files are most likely under:\nAssets/PlayMaker Custom Actions\n",
-                            MessageType.Info);
+                                    "\n\nOlder files are most likely under:\nAssets/PlayMaker Custom Actions\n",
+                                    MessageType.Info);
 
             GUILayout.FlexibleSpace();
             GUILayout.EndScrollView();
-
+	        
+	        GUILayout.BeginHorizontal();
             if (GUILayout.Button("Run Update Check Again"))
             {
                 DoCheck();
             }
+	        logCheckFindingToggle = GUILayout.Toggle(logCheckFindingToggle,"Log Check Findings",GUILayout.Width(130));
+	        GUILayout.EndHorizontal();
         }
 
         private static GUIStyle consoleStyle;
@@ -141,8 +165,10 @@ namespace HutongGames.PlayMakerEditor
         {
             if (consoleStyle == null)
             {
-                consoleStyle = new GUIStyle(EditorStyles.textArea);
-                consoleStyle.normal.textColor = Color.green;
+                consoleStyle = new GUIStyle(EditorStyles.textArea)
+                {
+                    normal = {textColor = Color.green}
+                };
             }
         }
 
@@ -166,7 +192,7 @@ namespace HutongGames.PlayMakerEditor
 
             for (var i = 0; i < checkCategories.Length; i++)
             {
-                if (ProjectHasAnyOfTheseFiles(checkFiles[i].Split(',')))
+                if (ProjectHasAnyOfTheseFiles(checkFiles[i].Split(','), officialPaths[i]))
                 {
                     failedCategories.Add(checkCategories[i]);
                 }
@@ -219,16 +245,46 @@ namespace HutongGames.PlayMakerEditor
             }
         }
 
-        private bool ProjectHasAnyOfTheseFiles(IEnumerable<string> files)
-        {
+        private bool ProjectHasAnyOfTheseFiles(IEnumerable<string> files, string excludePath)
+	    {	    
+		    var foundFile = false;
+
             foreach (var file in files)
             {
+                foreach (var checkFile in allFilesInProject)
+                {
+                    if (checkFile.Contains(excludePath)) continue;
+
+                    if (checkFile.Contains(file))
+                    {
+                        if (logCheckFindingToggle)
+                	    {
+                		    Debug.Log(
+	                		    "PlayMaker Pre-UpdateCheck Found the following file (click to Ping):\n" + checkFile,
+	                		    AssetDatabase.LoadAssetAtPath(checkFile, typeof(Object))
+                		    );
+                	    }
+
+	                    foundFile =  true;
+                    }
+                }
+
+                /*
                 if (allFilenames.Contains(file))
                 {
-                    return true;
-                }
+                	if (logCheckFindingToggle)
+                	{
+                		var _filePath = allFilesInProject[allFilenames.IndexOf(file)];
+                		Debug.Log(
+	                		"PlayMaker Pre-UpdateCheck Found the following file (click to Ping):\n"+_filePath,
+	                		AssetDatabase.LoadAssetAtPath(_filePath,typeof(Object))
+                		);
+                	}
+	                _foundFile =  true;
+                }*/
             }
-            return false;
+	        
+		    return foundFile;
         }
 
 #if DEV_MODE

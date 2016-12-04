@@ -81,7 +81,11 @@ namespace HutongGames.PlayMakerEditor
                 instance = Resources.Load<EditorStartupPrefs>("EditorStartupPrefs");
                 if (instance == null)
                 {
-                    Debug.Log("Missing EditorStartupPrefs asset!");
+                    AssetDatabase.CreateAsset(copy, "Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset");
+                    AssetDatabase.Refresh();
+                    instance = copy;
+
+                    //Debug.Log("Missing EditorStartupPrefs asset!");
                     return;
                 }
                 EditorUtility.CopySerialized(copy, instance);
