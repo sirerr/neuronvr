@@ -2,14 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class basicweapon : MonoBehaviour {
+public enum weapon {shooter,sword};
 
-	public List<GameObject> poppers = new List<GameObject>();
-	public int poppercount =0;
+public class basicweapon : MonoBehaviour {
 
 	//emitter end
 	public GameObject emitter;
 	public GameObject popperobj;
+
+    //sword part
+    public Collider col;
+    public GameObject swordpart;
 
 	//steam code
 	SteamVR_TrackedObject trackedobj;
@@ -18,13 +21,13 @@ public class basicweapon : MonoBehaviour {
 	//attack paramaters
 	public float attackSpeed =3f;
 
+    //weapon type
+    public weapon wChoice;
+    
+
 	void Awake()
 	{
-		poppercount = poppers.Count;
-		for (int i = 0; i < poppercount; i++) {
-			poppers [i] = popperobj;
-		}
-
+        col = GetComponent<Collider>();
 		trackedobj = transform.parent.GetComponent<SteamVR_TrackedObject>();
 	}
 
@@ -32,12 +35,47 @@ public class basicweapon : MonoBehaviour {
 	{
 		deviceobj = SteamVR_Controller.Input((int)trackedobj.index);
 
-		if(deviceobj.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
-		{
-			GameObject attack;
-			attack = Instantiate (popperobj, emitter.transform.position, Quaternion.identity) as GameObject;
-            attack.GetComponent<basicprojectile>().speed = attackSpeed;
-		}
+        switch (wChoice)
+        {
+            case weapon.shooter:
+                basicShoot();
+                break;
+            case weapon.sword:
+                basicSword();
+                break;
+        }
+
+
 	}
+
+    public void basicShoot()
+    {
+        if (col.enabled)
+        {
+            col.enabled = false;
+            swordpart.SetActive(false);
+        }
+
+        if (deviceobj.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+        {
+            GameObject attack;
+            attack = Instantiate(popperobj, emitter.transform.position, emitter.transform.rotation) as GameObject;
+            attack.GetComponent<basicprojectile>().speed = attackSpeed;
+        }
+
+    }
+
+    public void basicSword()
+    {
+        if (!col.enabled)
+        {
+            col.enabled = true;
+            swordpart.SetActive(true);
+        }
+
+    }
+
+
+
 
 }

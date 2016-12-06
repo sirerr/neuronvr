@@ -7,6 +7,8 @@ TagManager:
   - testobj
   - tool
   - vivearea
+  - zeropoint
+  - enemy
   layers:
   - Default
   - TransparentFX

@@ -11,8 +11,6 @@ public class basicprojectile : MonoBehaviour {
     public void Awake()
     {
         rbody = GetComponent<Rigidbody>();
-
-
     }
 
     public void FixedUpdate()
