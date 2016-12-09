@@ -9,6 +9,7 @@ TagManager:
   - vivearea
   - zeropoint
   - enemy
+  - gm
   layers:
   - Default
   - TransparentFX
