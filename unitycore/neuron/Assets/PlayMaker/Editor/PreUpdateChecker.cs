@@ -73,10 +73,12 @@ namespace HutongGames.PlayMakerEditor
 
         private void OnEnable()
         {
+            var titleText = string.Format("PlayMaker {0} Update Check", PlayMakerWelcomeWindow.InstallCurrentVersion);
+
 #if UNITY_PRE_5_1
-            title = "PlayMaker 1.8.3 Update Check";
+            title = titleText;
 #else
-            titleContent = new GUIContent("PlayMaker 1.8.3 Update Check");
+            titleContent = new GUIContent(titleText);
 #endif
             minSize = new Vector2(400,400);
 

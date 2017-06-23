@@ -18,12 +18,11 @@ namespace HutongGames.PlayMakerEditor
     public class PlayMakerWelcomeWindow : EditorWindow
     {
         // Remember to update version info since it's used by export scripts!
-        public const string InstallCurrentVersion = "1.8.3";
+        public const string InstallCurrentVersion = "1.8.4";
         public const string InstallBetaVersion = "";
         public const string Version = InstallCurrentVersion + " " + InstallBetaVersion;
 
         private const string editorPrefsSavedPage = "PlayMaker.WelcomeScreenPage";
-        private const string editorPrefsShowUpgradeGuide = "PlayMaker.ShowUpgradeGuide";
         private const string urlSamples = "http://www.hutonggames.com/samples.php";
         private const string urlTutorials = "http://www.hutonggames.com/tutorials.html";
         private const string urlDocs = "https://hutonggames.fogbugz.com/default.asp?W1";
@@ -83,7 +82,7 @@ namespace HutongGames.PlayMakerEditor
 
         private static bool stylesInitialized;
 
-#if PLAYMAKER_1_8_3
+#if PLAYMAKER_1_8_4
         [MenuItem("PlayMaker/Welcome Screen", false, 500)]
 #elif PLAYMAKER
         [MenuItem("PlayMaker/Update PlayMaker", false, 500)]
@@ -129,13 +128,11 @@ namespace HutongGames.PlayMakerEditor
             currentPage = Page.Welcome;
 
             // We want to show the Upgrade Guide after installing
-            // However, installation forces a recompile so we save an EditorPref
 
-            var showUpgradeGuide = EditorPrefs.GetBool(editorPrefsShowUpgradeGuide, false);
-            if (showUpgradeGuide)
+            if (EditorStartupPrefs.ShowUpgradeGuide)
             {
-                //currentPage = Page.UpgradeGuide; //TODO: This was problematic, need a better solution
-                EditorPrefs.SetBool(editorPrefsShowUpgradeGuide, false); // reset
+                //currentPage = Page.UpgradeGuide; //TODO: This was problematic
+                EditorStartupPrefs.ShowUpgradeGuide = false; // reset
                 EditorUtility.DisplayDialog("PlayMaker",
                     "Please check the Upgrade Guide for more information on this release.", 
                     "OK");
@@ -589,8 +586,8 @@ namespace HutongGames.PlayMakerEditor
             if (DisplayInstallDialog(InstallCurrentVersion, "The latest release version of PlayMaker." +
                                                         "\n\nNOTE: Projects saved with PlayMaker 1.8+ cannot be opened in older versions of PlayMaker!"))
             {
-                EditorPrefs.SetBool(editorPrefsShowUpgradeGuide, true);
-                ImportPackage(AssetDatabase.GUIDToAssetPath(AssetGUIDs.PlayMakerUnitypackage183));
+                EditorStartupPrefs.ShowUpgradeGuide = true; // show upgrade guide after importing
+                ImportPackage(AssetDatabase.GUIDToAssetPath(AssetGUIDs.PlayMakerUnitypackage184));
             }
         }
 
@@ -600,7 +597,7 @@ namespace HutongGames.PlayMakerEditor
             if (DisplayInstallDialog(InstallBetaVersion, "The latest BETA version of PlayMaker." +
                                                         "\n\nNOTE: Projects saved with PlayMaker 1.8+ cannot be opened in older versions of PlayMaker!"))
             {
-                EditorPrefs.SetBool(editorPrefsShowUpgradeGuide, true);
+                EditorStartupPrefs.ShowUpgradeGuide = true; // show upgrade guide after importing
                 ImportPackage(AssetDatabase.GUIDToAssetPath(AssetGUIDs.PlayMakerUnitypackage181));
             }*/
         }

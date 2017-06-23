@@ -61,9 +61,24 @@ namespace HutongGames.PlayMakerEditor
             }
         }
 
+        public static bool ShowUpgradeGuide
+        {
+            get { return Instance.showUpgradeGuide; }
+            set
+            {
+                if (value != Instance.showUpgradeGuide)
+                {
+                    Instance.showUpgradeGuide = value;
+                    Save();
+                }
+            }
+        }
+
+
         [SerializeField] private string welcomeScreenVersion;
         [SerializeField] private string playmakerVersion;
         [SerializeField] private bool showWelcomeScreen = true;
+        [SerializeField] private bool showUpgradeGuide;
 
         public static void ResetForExport()
         {
